@@ -1,0 +1,35 @@
+
+services:
+  frontend-ci:
+    container_name: ci-frontend
+    build:
+      context: ./frontend
+    ports:
+      - "3001:80"
+    volumes:
+      - ./frontend/src:/usr/share/nginx/html:ro
+    depends_on:
+      - backend-ci
+    networks:
+      - internal
+    restart: unless-stopped
+
+  backend-ci:
+    container_name: ci-backend
+    build:
+      context: ./backend
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    expose:
+      - "3501"
+    environment:
+      - API_KEY=${API_KEY}
+
+    networks:
+      - internal
+    restart: unless-stopped
+
+networks:
+  internal:
+    driver: bridge

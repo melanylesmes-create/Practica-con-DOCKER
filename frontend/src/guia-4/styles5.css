@@ -1,0 +1,168 @@
+.container {
+    display: grid;
+
+    height: 100vh;
+    gap: 20px;
+    width: 100vw;
+    /* flex-wrap: wrap; */
+    grid-template-columns: auto auto auto auto;
+}
+
+.element {
+    /* min-width: 200px; */
+    height: 200px;
+    background-color: lightblue;
+    padding: 20px;
+    /* flex-grow: 1; */
+}
+
+#element-03 {
+    /* flex-grow: 2; */
+    grid-column: 2 / 4;
+}
+
+#element-04 {
+    flex-shrink: 0.2;
+    grid-column: 1 / 5;
+}
+
+#element-05 {
+    flex-shrink: 1;
+}
+
+@media (width < 1920px) {
+    .element {
+        background: darkblue;
+    }
+}
+
+@media (width < 1024px) {
+    .element {
+        background: blue;
+    }
+}
+
+@media (width < 768px) {
+    .element {
+        background: red;
+    }
+}
+
+.image {
+    width: 200px;
+    height: auto;
+}
+
+:root {
+    --bg: #f9fafb;
+    --primary: #ffcc00;
+    --text: #111827;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --border: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Por defecto es content-box; el padding y el border se calculan por fuera */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.header {
+    background: var(--primary);
+    padding: 16px;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.nav a:hover {
+    background-color: #e5e7eb;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.hero {
+    background: #fff7cc;
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Media Queries */
+/* @media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wrap {
+        padding: 12px;
+    }
+
+    .hero {
+        padding: 12px;
+    }
+} */
