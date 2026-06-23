@@ -1,0 +1,43 @@
+
+    /*======= Estilo para el header nomas :p ==========*/
+    header {
+        background-color:#14305c;
+        color:#ffffff;
+        padding: 20px 30px ; /*Es el espacio entre el texto y la caja que lo contiene*/
+        font-size: 1.6rem;
+        font-weight: bold;
+        border-bottom: 3px solid #d4af37;
+    }
+
+    /* ===== Estilo nav ====*/
+    nav{
+    background-color: #102542;   /* azul más oscuro para la barra */
+    padding: 12px 30px;
+    border-bottom: 2px solid #d4af37;
+    }
+    
+    /*===COlor de los links? ====*/
+    nav a{
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 8px;
+    }
+
+    /*=== Cuando pasa el cursor encima de los links === */
+    nav a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+    }
+
+    hr{
+    border-color: #d4af37;
+    }
+    
+    body{
+    font-family: Arial, sans-serif; /*Tipo de letra para mostrar el texto*/
+    margin: 0;
+    background-color: #0d1b2a;   /* fondo general oscuro */
+    color: #e2e8f0;
+    }
+    
